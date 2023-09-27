@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --background-overlay: rgba(0, 0, 0, 0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+
+.container{
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.section{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: #fff;
+}
+
+.section_inputs, .section_temp{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+}
+
+.section_inputs input{
+  border: 0.8px solid #fff;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.section_inputs input:focus{
+  outline: none;
+}
+
+.section_inputs button{
+  padding: 10px 50px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+.section_inputs button:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon h3{
+  font-size: 15px;
+  font-weight: 200px;
+  text-transform: uppercase;
+}
+
+.temp h1{
+  font-size: 60px;
+}
+
+/* Update the error-message container to center its content */
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: var(--section-overlay);
+  border-radius: 0.4rem;
+}
+
+/* Style the error message text */
+.error-message p {
+  padding: 1rem;
+}
+
+/* Style the reset button */
+.error-message button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.error-message button:hover {
+  background-color: lightgray;
 }
